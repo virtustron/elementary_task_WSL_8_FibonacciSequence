@@ -5,8 +5,8 @@ void FibonacciSequenceConsoleUI::MakeDialog(int argc, char* argv[])
 {
     // TODO: request data from user
     // ...
-    // for example Upper Bound is 10
-    m_upper_bound = 10;
+    // for example Upper Bound is 50
+    m_upper_bound = 50;
 
 
     // TODO: validate "m_upper_bound" 
