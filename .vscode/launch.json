@@ -4,16 +4,15 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
+        
         {
-            "name": "g++ - Build and debug active file",
+            "name": "g++ - Build entire project",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/main",
-            "includePath": ["${workspaceFolder}/src"],
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/**",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
