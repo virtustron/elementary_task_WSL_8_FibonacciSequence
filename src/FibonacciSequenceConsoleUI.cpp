@@ -1,7 +1,7 @@
 #include "FibonacciSequenceConsoleUI.hpp"
 
 
-void NaturalSequenceConsoleUI::MakeDialog(int argc, char* argv[])
+void FibonacciSequenceConsoleUI::MakeDialog(int argc, char* argv[])
 {
     // TODO: request data from user
     // ...
@@ -18,16 +18,16 @@ void NaturalSequenceConsoleUI::MakeDialog(int argc, char* argv[])
 }
 
 
-void NaturalSequenceConsoleUI::ShowInstructions()
+void FibonacciSequenceConsoleUI::ShowInstructions()
 {
     // TODO: show program instructions
 }
 
-void NaturalSequenceConsoleUI::WriteSequence()
+void FibonacciSequenceConsoleUI::WriteSequence()
 {
     unsigned int current_number = m_iterator.Current();
     
-    while (current_number*current_number < m_upper_bound)
+    while (current_number < m_upper_bound)
     {
         std::cout << current_number << ", ";
         m_iterator.Next();
