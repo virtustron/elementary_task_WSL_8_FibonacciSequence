@@ -6,7 +6,7 @@
     "configurations": [
         
         {
-            "name": "g++ - Build entire project",
+            "name": "C/C++ Runner: Debug Session",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/main",
@@ -23,7 +23,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++ build active file",
+            "preLaunchTask": "Build project",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
