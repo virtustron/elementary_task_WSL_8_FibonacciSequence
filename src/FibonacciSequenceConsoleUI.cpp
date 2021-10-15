@@ -26,7 +26,7 @@ void FibonacciSequenceConsoleUI::ShowInstructions()
 void FibonacciSequenceConsoleUI::WriteSequence()
 {
     
-    auto fibonacci_sequence = FibonacciSequence(50, 100);
+    auto fibonacci_sequence = FibonacciSequence(10, 100);
 
     for (auto it = fibonacci_sequence.begin(), end = fibonacci_sequence.end(); it < end; ++it)
     {
