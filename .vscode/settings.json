@@ -4,6 +4,8 @@
         "memory_resource": "cpp",
         "type_traits": "cpp",
         "random": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "iostream": "cpp",
+        "stdexcept": "cpp"
     }
 }
