@@ -6,7 +6,7 @@ void FibonacciSequenceConsoleUI::MakeDialog(int argc, char* argv[])
     // TODO: request data from user
     // ...
     // for example Upper Bound is 50
-    m_upper_bound = 50;
+    m_upper_bound = 100;
 
 
     // TODO: validate "m_upper_bound" 
@@ -25,14 +25,15 @@ void FibonacciSequenceConsoleUI::ShowInstructions()
 
 void FibonacciSequenceConsoleUI::WriteSequence()
 {
-    unsigned int current_number = m_iterator.Current();
-    
-    while (current_number < m_upper_bound)
+    for (unsigned int i : FibonacciSequence()) 
     {
-        std::cout << current_number << ", ";
-        m_iterator.Next();
-        current_number = m_iterator.Current();
+        std::cout << i << ' '; 
+
+        if (i == m_upper_bound)
+        {
+            break;
+        }
     }
 
-    std::cout << "\n"; 
+    std::cout << '\n'; 
 }

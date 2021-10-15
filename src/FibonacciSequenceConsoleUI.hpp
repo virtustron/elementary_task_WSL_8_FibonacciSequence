@@ -1,9 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include "FibonacciSequenceIterator.hpp"
-
-using namespace std;
+#include <iterator>
+#include "FibonacciSequence.hpp"
 
 class FibonacciSequenceConsoleUI
 {
@@ -14,7 +13,4 @@ public:
 
 private:
 	unsigned int m_upper_bound;
-    FibonacciSequenceIterator m_iterator;
-
-
 };

@@ -1,56 +1,61 @@
 #include <limits.h>
 #include "FibonacciSequenceIterator.hpp"
 
-FibonacciSequenceIterator::FibonacciSequenceIterator()
-{
-    // init list - use ":"
-    m_iterator = 0;
-    m_last = 0;
-    m_before_last = 0;
-}
-
-void FibonacciSequenceIterator::Next()
+FibonacciSequenceIterator& FibonacciSequenceIterator::operator++() 
 {
     // 0 1 1 2 3 5 8 13 21 34
+    switch (m_num)
+    {
+    case 0:
+        ++m_num;
+        break;
+
+    case 1:
+        if (m_last == 0)
+        {
+            m_last = 1;
+        }
+        else
+        {
+            // m_last == 1
+            m_num = m_last + m_before_last;
+
+            m_before_last = m_last;
+            m_last = m_num;
+        }
+        
+        break;
     
-
-    //TODO: switch
-
-    if (0 == m_iterator)
-    {   
-        ++m_iterator;
-    } 
-
-    if ((m_iterator == 1) && (m_last == 0))
-    {   
-        m_last = 1;
-    }  
-
-    if ((m_iterator == 1) && (m_last == 1))
-    {   
-        m_iterator = m_last + m_before_last;
-
-        m_before_last = 1;
-        m_last = m_iterator;
-
-    } 
-
-    if (m_iterator > 1)
-    {   
-        m_iterator += m_last + m_before_last;
-
+    default:
+        m_num = m_last + m_before_last;
         m_before_last = m_last;
-        m_last = m_iterator;
+        m_last = m_num;
+        
+        break;
     }
 
+    return *this;
 }
 
-bool FibonacciSequenceIterator::IsDone() 
+FibonacciSequenceIterator FibonacciSequenceIterator::operator++(int) 
 {
-    return (m_iterator == UINT_MAX);
+    FibonacciSequenceIterator retval = *this; 
+    ++(*this); 
+    
+    return retval;
 }
 
-unsigned int FibonacciSequenceIterator::Current() 
+bool FibonacciSequenceIterator::operator==(const FibonacciSequenceIterator& other) const 
 {
-    return m_iterator;
+    return m_num == other.m_num;
+}
+
+bool FibonacciSequenceIterator::operator!=(const FibonacciSequenceIterator& other) const 
+{
+    return !(*this == other);
+}
+
+FibonacciSequenceIterator::reference FibonacciSequenceIterator::operator*() const 
+{
+    return m_num;
 }

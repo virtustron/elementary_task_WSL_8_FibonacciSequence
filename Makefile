@@ -11,6 +11,7 @@ main: build_all
 
 build_all:
 	g++ -g -o $(bin)FibonacciSequenceIterator.o -c $(src)FibonacciSequenceIterator.cpp
+	g++ -g -o $(bin)FibonacciSequence.o -c $(src)FibonacciSequence.cpp
 	g++ -g -o $(bin)FibonacciSequenceConsoleUI.o -c $(src)FibonacciSequenceConsoleUI.cpp
 	g++ -g -o $(bin)main.o -c $(src)main.cpp
 
