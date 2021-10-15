@@ -20,6 +20,9 @@ public:
 
         bool operator==(const FibonacciSequenceIterator& other) const;
         bool operator!=(const FibonacciSequenceIterator& other) const;
+
+        bool operator>(const FibonacciSequenceIterator& other) const;
+        bool operator<(const FibonacciSequenceIterator& other) const;
         
         reference operator*() const;
 

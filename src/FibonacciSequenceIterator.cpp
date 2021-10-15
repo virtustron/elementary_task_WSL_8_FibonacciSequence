@@ -59,3 +59,13 @@ FibonacciSequenceIterator::reference FibonacciSequenceIterator::operator*() cons
 {
     return m_num;
 }
+
+bool FibonacciSequenceIterator::operator>(const FibonacciSequenceIterator& other) const
+{
+    return m_num > other.m_num;
+}
+
+bool FibonacciSequenceIterator::operator<(const FibonacciSequenceIterator& other) const
+{
+    return m_num < other.m_num;
+}
