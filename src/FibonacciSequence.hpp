@@ -1,7 +1,6 @@
 #pragma once
 
 #include <limits.h>
-
 #include "FibonacciSequenceIterator.hpp"
 
 class FibonacciSequence

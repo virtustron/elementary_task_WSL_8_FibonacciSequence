@@ -26,20 +26,12 @@ void FibonacciSequenceConsoleUI::ShowInstructions()
 void FibonacciSequenceConsoleUI::WriteSequence()
 {
     
-    auto fibonacci_sequence = FibonacciSequence(0, 100);
+    auto fibonacci_sequence = FibonacciSequence(50, 100);
 
-    //for (unsigned int i : FibonacciSequence(0, 100)) 
     for (auto it = fibonacci_sequence.begin(), end = fibonacci_sequence.end(); it < end; ++it)
     {
         const auto i = *it;
         std::cout << i << ' '; 
-
-        /*
-        if (i >= m_upper_bound)
-        {
-            break;
-        }
-        */
     }
 
     std::cout << '\n'; 
