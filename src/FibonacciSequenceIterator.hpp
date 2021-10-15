@@ -18,9 +18,7 @@ public:
         {
                 if (num > 0)
                 {
-                        m_num = FindNearestBiggerFibonacciNumber(num);
-                        m_last = CalculatePreviousFibonacciNumber(m_num);
-                        m_before_last = CalculatePreviousFibonacciNumber(m_last);
+                        m_num = FindNearestBiggerFibonacciNumber(num, m_last, m_before_last);
                 }
         }
         
@@ -45,7 +43,10 @@ private:
                 const unsigned int current_fibonacci_number, 
                 unsigned int& last_fibonacci_number,
                 unsigned int& before_last_fibonacci_number);
-        unsigned int FindNearestBiggerFibonacciNumber(const unsigned int number);
+        unsigned int FindNearestBiggerFibonacciNumber(
+                const unsigned int number, 
+                unsigned int& last_fibonacci_number,
+                unsigned int& before_last_fibonacci_number);
 };
 
 

@@ -88,19 +88,17 @@ unsigned int FibonacciSequenceIterator::CalculateNextFibonacciNumber(
 
 }
 
-unsigned int FibonacciSequenceIterator::FindNearestBiggerFibonacciNumber(const unsigned int number)
+unsigned int FibonacciSequenceIterator::FindNearestBiggerFibonacciNumber(
+    const unsigned int number, 
+    unsigned int& last_fibonacci_number,
+    unsigned int& before_last_fibonacci_number)
 {
-    unsigned int fibonacci_number = 0; 
-    unsigned int last_fibonacci_number = 0; 
-    unsigned int before_last_fibonacci_number = 0;
-
-    int i = 0;
+    unsigned int bigger_fibonacci_number = 0; 
     
-    
-    while (fibonacci_number < number)
+    while (bigger_fibonacci_number < number)
     {
-        fibonacci_number = CalculateNextFibonacciNumber(fibonacci_number, last_fibonacci_number, before_last_fibonacci_number);
+        bigger_fibonacci_number = CalculateNextFibonacciNumber(bigger_fibonacci_number, last_fibonacci_number, before_last_fibonacci_number);
     }
 
-    return fibonacci_number;
+    return bigger_fibonacci_number;
 }
