@@ -7,7 +7,7 @@ all: main
 # “-g ”: Generates debugging information
 
 main: build_all
-	g++ -g -o $(bin)main $(bin)main.o $(bin)FibonacciSequenceConsoleUI.o $(bin)FibonacciSequenceIterator.o 
+	g++ -g -o $(bin)main $(bin)main.o $(bin)FibonacciSequenceConsoleUI.o $(bin)FibonacciSequenceIterator.o $(bin)FibonacciSequence.o 
 
 build_all:
 	g++ -g -o $(bin)FibonacciSequenceIterator.o -c $(src)FibonacciSequenceIterator.cpp

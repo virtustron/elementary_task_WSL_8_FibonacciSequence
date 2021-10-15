@@ -29,7 +29,7 @@ void FibonacciSequenceConsoleUI::WriteSequence()
     {
         std::cout << i << ' '; 
 
-        if (i == m_upper_bound)
+        if (i >= m_upper_bound)
         {
             break;
         }
